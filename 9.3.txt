@@ -1,0 +1,42 @@
+fumeng: it is for collecting and moving large amount of data into hdfs
+	yarn coordinates data ingest from apache flume and other services that deliver raw
+        data into an hadoop cluster
+	flume requires some core classes and systems to solve issues and limitations
+ 	it has simple and flexible architecture based streaming data flow
+======================================================================================================
+2)Can Flume provides 100 % reliability to the data flow?
+   
+   
+  	yes,it provide 100% reliability of data flow 
+	since it provide end to end reliablity,sources and sinks encapsulated in a 
+ 	transactional repository provides by the channel
+===============================================================================================
+3)
+   Can Flume can distributes data to multiple destinations?
+
+
+
+	yes,flume can distributes data to multiple destinations sice itsupport multiplexing flow
+	the event flow from one source to multiple channels and acheived by flow multiplexer
+
+======================================================================================================
+
+4)
+Explain about the different channel types in Flume. And which channel type is
+faster?
+
+The two channel types in flume are
+MEMORY Channel :Events are read from the source into memory and passed to the sink.
+
+FILE Channel :File Channel writes the contents to a file on the file system after reading 
+the event from a source. 
+The file is deleted only  after the contents are successfully delivered to the sink.
+
+MEMORY Channel :sis the fastest channel among the three however has the risk of data loss. 
+The channel that you choose completely depends on the nature of the big data application 
+and the value of each event.
+
+
+
+
+   
